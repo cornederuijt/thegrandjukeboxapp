@@ -1,4 +1,5 @@
-.p*
-.pyc*
-.xml*
-.iml*
+*.p
+*.pyc
+*.xml
+*.iml
+*.idea/
