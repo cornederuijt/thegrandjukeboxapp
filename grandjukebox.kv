@@ -10,25 +10,53 @@ ScreenManager:
         id: "screen_two"
         name: "screen_two"
         manager: "screen_manager"
+    ScreenThree:
+        id: "screen_three"
+        name: "screen_three"
+        manager: "screen_manager"
+    ScreenFour:
+        id: "screen_four"
+        name: "screen_four"
+        manager: "screen_manager"
+    ScreenFive:
+        id: "screen_five"
+        name: "screen_five"
+        manager: "screen_manager"
+    ScreenThanks:
+        id: "screen_thanks"
+        name: "screen_thanks"
+        manager: "screen_manager"
+
+<CustButton@Button>:
+    font_size: 32
+    background_normal:"greybutton.png"
 
 <ScreenOne>:
     BoxLayout:
+        canvas.before:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: "background2.png"
+        spacing: 50
+        padding: [100, 40, 100 ,40]
         orientation: "vertical"
         Label:
+            font_size: 32
             text: "Kies een genre:"
-        Button:
+        CustButton:
             text: "Disco"
             on_press:
                 app.root.transition.direction = "left"
                 app.root.transition.duration = 1
                 app.root.current = "screen_two"
-        Button:
+        CustButton:
             text: "Rock"
             on_press:
                 app.root.transition.direction = "left"
                 app.root.transition.duration = 1
                 app.root.current = "screen_two"
-        Button:
+        CustButton:
             text: "Soul"
             on_press:
                 app.root.transition.direction = "left"
@@ -37,23 +65,147 @@ ScreenManager:
 
 <ScreenTwo>:
     BoxLayout:
+        canvas.before:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: "background2.png"
+        spacing: 50
+        padding: [100, 40, 100 ,80]
         orientation: "vertical"
         Label:
+            font_size: 32
             text: "Kies een artiest:"
-        Button:
+        CustButton:
             text: "Anouk"
             on_press:
                 app.root.transition.direction = "left"
                 app.root.transition.duration = 1
-                app.root.current = "screen_one"
-        Button:
+                app.root.current = "screen_three"
+        CustButton:
             text: "Bon Jovi"
             on_press:
                 app.root.transition.direction = "left"
                 app.root.transition.duration = 1
-                app.root.current = "screen_one"
-        Button:
+                app.root.current = "screen_three"
+        CustButton:
             text: "Santana"
+            on_press:
+                app.root.transition.direction = "left"
+                app.root.transition.duration = 1
+                app.root.current = "screen_three"
+
+<ScreenThree>:
+    BoxLayout:
+        canvas.before:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: "background2.png"
+        spacing: 50
+        padding: [100, 40, 100 ,80]
+        orientation: "vertical"
+        Label:
+            font_size: 32
+            text: "Wat heb je liever?"
+        CustButton:
+            text: "Een paard in de gang"
+            on_press:
+                app.root.transition.direction = "left"
+                app.root.transition.duration = 1
+                app.root.current = "screen_four"
+        CustButton:
+            text: "Een helse disco"
+            on_press:
+                app.root.transition.direction = "left"
+                app.root.transition.duration = 1
+                app.root.current = "screen_four"
+        CustButton:
+            text: "Een schone auto"
+            on_press:
+                app.root.transition.direction = "left"
+                app.root.transition.duration = 1
+                app.root.current = "screen_four"
+
+<ScreenFour>:
+    BoxLayout:
+        canvas.before:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: "background2.png"
+        spacing: 50
+        padding: [100, 40, 100 ,80]
+        orientation: "vertical"
+        Label:
+            font_size: 32
+            text: "Ik zou graag"
+        CustButton:
+            text: "Willen leven op een gebed"
+            on_press:
+                app.root.transition.direction = "left"
+                app.root.transition.duration = 1
+                app.root.current = "screen_five"
+        CustButton:
+            text: "Altijd willen rennen"
+            on_press:
+                app.root.transition.direction = "left"
+                app.root.transition.duration = 1
+                app.root.current = "screen_five"
+        CustButton:
+            text: "Iemand lief hebben"
+            on_press:
+                app.root.transition.direction = "left"
+                app.root.transition.duration = 1
+                app.root.current = "screen_five"
+
+<ScreenFive>:
+    BoxLayout:
+        canvas.before:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: "background2.png"
+        spacing: 50
+        padding: [100, 40, 100 ,80]
+        orientation: "vertical"
+        Label:
+            font_size: 32
+            text: "Ik ben gek op"
+        CustButton:
+            text: "Celebrations"
+            on_press:
+                app.root.transition.direction = "left"
+                app.root.transition.duration = 1
+                app.root.current = "screen_thanks"
+        CustButton:
+            text: "Een ladies night"
+            on_press:
+                app.root.transition.direction = "left"
+                app.root.transition.duration = 1
+                app.root.current = "screen_thanks"
+        CustButton:
+            text: "Pizza, Mamma mia!"
+            on_press:
+                app.root.transition.direction = "left"
+                app.root.transition.duration = 1
+                app.root.current = "screen_thanks"
+
+<ScreenThanks>:
+    BoxLayout:
+        canvas.before:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: "background2.png"
+        spacing: 50
+        padding: [100, 40, 100 ,80]
+        orientation: "vertical"
+        Label:
+            font_size: 32
+            text: "Bedankt voor het meedoen"
+        CustButton:
+            text: "Begin opnieuw!"
             on_press:
                 app.root.transition.direction = "left"
                 app.root.transition.duration = 1

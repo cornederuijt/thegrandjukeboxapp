@@ -12,6 +12,17 @@ class ScreenOne(Screen):
 class ScreenTwo(Screen):
     pass
 
+class ScreenThree(Screen):
+    pass
+
+class ScreenFour(Screen):
+    pass
+
+class ScreenFive(Screen):
+    pass
+
+class ScreenThanks(Screen):
+    pass
 
 class GrandJukeboxApp(App):
     pass
