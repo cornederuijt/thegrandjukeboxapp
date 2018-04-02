@@ -1,0 +1,60 @@
+#: kivy 1.10.0
+
+ScreenManager:
+    id: screen_manager
+    ScreenOne:
+        id: "screen_one"
+        name: "screen_one"
+        manager: "screen_manager"
+    ScreenTwo:
+        id: "screen_two"
+        name: "screen_two"
+        manager: "screen_manager"
+
+<ScreenOne>:
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            text: "Kies een genre:"
+        Button:
+            text: "Disco"
+            on_press:
+                app.root.transition.direction = "left"
+                app.root.transition.duration = 1
+                app.root.current = "screen_two"
+        Button:
+            text: "Rock"
+            on_press:
+                app.root.transition.direction = "left"
+                app.root.transition.duration = 1
+                app.root.current = "screen_two"
+        Button:
+            text: "Soul"
+            on_press:
+                app.root.transition.direction = "left"
+                app.root.transition.duration = 1
+                app.root.current = "screen_two"
+
+<ScreenTwo>:
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            text: "Kies een artiest:"
+        Button:
+            text: "Anouk"
+            on_press:
+                app.root.transition.direction = "left"
+                app.root.transition.duration = 1
+                app.root.current = "screen_one"
+        Button:
+            text: "Bon Jovi"
+            on_press:
+                app.root.transition.direction = "left"
+                app.root.transition.duration = 1
+                app.root.current = "screen_one"
+        Button:
+            text: "Santana"
+            on_press:
+                app.root.transition.direction = "left"
+                app.root.transition.duration = 1
+                app.root.current = "screen_one"
